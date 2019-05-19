@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>forms</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="progressBar.css" />
+  </head>
+  <body>
+    <header>
+      <div class="nav1">
+        <div class="logo">
+          <a href="Ecomerce.png"><img src="Ecomerce.png" alt="logo"/></a>
+        </div>
+        <nav>
+          <ul class="menu">
+            <li><a href="#">home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">contact</a></li>
+            <li><a href="#"><label for="search"> Search</label>
+                <input type="text" id="search" placeholder="search"/></a> </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="steps">
+        <h1>Sign up to yourdocorationDesigner.com</h1>
+        
+        <h2>Step 2/4 - How can we reach you?</h2>
+      </section>
+      <form class="progress">
+        <h3>progress bar</h3>
+        <ul class="bar">
+          <li class="active">step 1</li>
+          <li>step 2</li>
+          <li>step 3</li>
+          <li>step 4</li>
+        </ul>
+        <fieldset>
+            <p>We will probably stay in touch somehow.Let us know how we can reach you.</p>
+           <div>
+                <label for="email">Email*</label>
+            <input type="email" id="email" required>
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" >
+           
+        </div>
+        <div>
+        <label for="password">Password*</label>
+        <input type="password" required id="password">
+        </div>
+
+              <div>
+              <label for="reInterPass">Re inter password*</label> 
+              <input type="password" id="password" required>
+               
+
+               </div>
+<p>I want to sign up for the newsletter</p>
+      
+                       <label class="radio" for="radioButton1">Weekly news</label>
+                       <input class="inpradio" type="radio" id="radioButton">
+                    <label class="radio" for="radioButton2">Monthly news</label>
+                    <input class="inpradio" type="radio" id="radioButton2">
+                    <label class="radio" for="radioButton3">Don't send me news</label>
+                       <input class="inpradio" type="radio" id="radioButton3">
+            <div>
+            <button><a href="form3.html">Continue</a></button>
+            </div>
+          </div>
+            </fieldset>
+
+
+      </form>
+    </main>
+  </body>
+</html>

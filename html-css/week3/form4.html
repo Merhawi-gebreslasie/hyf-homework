@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>forms</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="progressBar.css" />
+  </head>
+  <body>
+    <header>
+      <div class="nav1">
+        <div class="logo">
+          <a href="Ecomerce.png"><img src="Ecomerce.png" alt="logo"/></a>
+        </div>
+        <nav>
+          <ul class="menu">
+            <li><a href="#">home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">contact</a></li>
+            <li><a href="#"><label for="search"> Search</label>
+                <input type="text" id="search" placeholder="search"/></a> </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="steps">
+        <h1>Sign up to yourdocorationDesigner.com</h1>
+        <h2>Step 1/4 - Payment.</h2>
+      </section>
+      <form class="progress">
+        <h3>progress bar</h3>
+        <ul class="bar">
+          <li class="active">step 1</li>
+          <li>step 2</li>
+          <li>step 3</li>
+          <li>step 4</li>
+        </ul>
+        <fieldset>
+            <p>Please fill  your payment data.</p>
+           <div>
+                <label for="cardName">Name on card</label>
+            <input type="text" id="cardName" >
+            
+        <div>
+        <label for="cardType">Country*</label>
+        <select required id="Card type">
+            <option value="">none</option>
+                <option value="Vissa">Vissa</option>
+                <option value="Master">Master</option>
+                
+
+              </select>
+        </div>
+
+              <div>
+              <label for="creditNumber">Credit card number</label> 
+              <input type="number" id="creditNumber" >
+              <label for="firstName1">Frist name</label>
+               <input type="text" id="firstName1"required> 
+
+               </div>
+              
+                  <div>
+                       <label   for="expiri">Expiri month</label>
+                       <input  type="date" id="expiri">
+                  </div>
+                  <div>
+                      <label for="ccv">CCV</label>
+                      <input type="number" id="ccv">
+                  </div>
+            <button>submit</button>
+            </div>
+          </div>
+            </fieldset>
+
+
+      </form>
+    </main>
+  </body>
+</html>

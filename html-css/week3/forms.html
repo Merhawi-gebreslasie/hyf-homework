@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>forms</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="progressBar.css" />
+  </head>
+  <body>
+    <header>
+      <div class="nav1">
+        <div class="logo">
+          <a href="Ecomerce.png"><img src="Ecomerce.png" alt="logo"/></a>
+        </div>
+        <nav>
+          <ul class="menu">
+            <li><a href="#">home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">contact</a></li>
+            <li><a href="#"><label for="search"> Search</label>
+                <input type="text" id="search" placeholder="search"/></a> </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="steps">
+        <h1>Sign up to yourdocorationDesigner.com</h1>
+        <p>
+          We can't wait to help yoiu improve your life style and gain the
+          attention from people around you
+        </p>
+        <p>
+          Sign p below to save up to 70% on apparel hand bags and cosmetics.Our
+          agents are bussy picking the best offers that match your preferences
+          and style .Every week week we will send you a hand picked selecion. We
+          just need to know a few details abut you first!
+        </p>
+        <h2>Step 1/4 - tell us who you are?</h2>
+      </section>
+      <form class="progress">
+        <h3>progress bar</h3>
+        <ul class="bar">
+          <li class="active">step 1</li>
+          <li>step 2</li>
+          <li>step 3</li>
+          <li>step 4</li>
+        </ul>
+        <fieldset>
+            <p>nice to meet you. let's spend a minute to get to know each other?please enter the following.</p>
+           <div>
+                <label for="firstName">First name*</label>
+            <input type="text" id="firstName" required>
+            <label for="lastName">Last name*</label>
+            <input type="text" id="lastName" required>
+           
+        </div>
+        <div>
+        <label for="Country">Country*</label>
+        <select required id="Country">
+                <option value=""></option>
+                <option value="Eritrea">Eritrea</option>
+                <option value="Ethiopia">Ethiopia</option>
+                <option value="Denmark">Denmark</option>
+                <option value="USA">USA</option>
+
+              </select>
+        </div>
+
+              <div>
+              <label for="streetAddress">Street address*</label> 
+              <input type="text" id="streetAddress" required>
+              <label for="postCode">Post code*</label>
+               <input type="text" id="postCode"required> 
+
+               </div>
+              
+                   <p>Use the same address for billing and shipping? check below to fill out a separate shipping address </p>
+      
+                       <label  class="inline" for="check">Shipping address</label>
+                       <input class="check" type="checkbox" id="check">
+            
+            <div class="checkbox">
+                            <div class="name">
+                                    <label for="firstName">First name*</label>
+                                <input type="text" id="firstName" required>
+                                <label for="lastName">Last name*</label>
+                                <input type="text" id="lastName" required>
+                               
+                            </div>
+                            <div class="country">
+                            <label for="Country">Country*</label>
+                            <select required id="Country">
+                                    <option value=""></option>
+                                    <option value="Eritrea">Eritrea</option>
+                                    <option value="Ethiopia">Ethiopia</option>
+                                    <option value="Denmark">Denmark</option>
+                                    <option value="USA">USA</option>
+                    
+                                  </select>
+                            </div>
+                    
+                                  <div steet>
+                                  <label for="streetAddress">Street address*</label> 
+                                  <input type="text" id="streetAddress" required>
+                                  <label for="postCode">Post code*</label>
+                                   <input type="text" id="postCode"required> 
+                    
+                                   </div>
+                                  
+              <div class="message">                 
+                <label for="mess"><p>profile description</p> 
+                please provide a short description of your self to be displayed on our social community pages.</label>
+                <textarea maxlength="500" name="message" id="mess" cols="30" rows="10">maximum 500 characters! </textarea>
+            </div>
+            <div>
+            <button><a href="forms2.html">Continue</a></button>
+            </div>
+          </div>
+            </fieldset>
+
+
+      </form>
+    </main>
+  </body>
+</html>
