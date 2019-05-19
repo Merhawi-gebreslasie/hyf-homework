@@ -28,7 +28,7 @@ body {
 }
 .menu li label{
     text-align: right;
-    color:white;
+    color:rgb(212, 166, 166);
     cursor: pointer;
 
 }
@@ -179,4 +179,10 @@ input[type=checkbox]:checked~.checkbox{
 }
 .inpradio{
   width:100px;
+}
+.search{
+  color:white;
+  background:blue;
+  line-height: 20px;
+  cursor: pointer;
 }
