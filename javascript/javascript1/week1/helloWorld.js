@@ -62,8 +62,8 @@ console.log(housey(8,10,10,100));
 
 
 // Startup name
-  var firstWords=['tutorsport','mthm','jvs','cshtml','onlinecour','nutraveller','gomore','hyf','github','slack'];
-  var secondWrods=['match','solutions','lang','web','smile','jet','intime','coding','share','channel'];
+  var firstWords=['tutorsport','mthm','js','html','onlinecourse','traveller','gomore','hyf','github','slack'];
+  var secondWrods=['tutorsporta','mthmtics','jvs','cshtml','onlincor','nutraveller','thegomore','liveforcoding','githubex','slackq'];
   var randomIndex=Math.floor(Math.random()*10);
   var startUpName=firstWords[randomIndex] + ' '+ secondWrods[randomIndex];
   console.log(startUpName , '   numberOfCharacters= ' +startUpName.length);
