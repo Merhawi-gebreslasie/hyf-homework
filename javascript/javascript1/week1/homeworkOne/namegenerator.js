@@ -1,8 +1,9 @@
 console.log("Ez Namey (Startup name generator) Optional");
 let firstWords=["math","fix","code","html","js","css","slack","arr","userName","firstName"];
 let secondWords=['tutorsporta','mthmtics','jvs','cshtml','onlincor','nutraveller','thegomore','liveforcoding','githubex','slackq']
-let randomIndex=Math.floor(Math.random()*10)+0;
-let startUpName=firstWords[randomIndex]+" - "+ secondWords[randomIndex];
+let firstRandom=Math.floor(Math.random()*10)+0;
+let secondRandom=Math.floor(Math.random()*10)+0;
+let startUpName=firstWords[fristRandom]+" - "+ secondWords[secondRandom];
 console.log(startUpName,   "   number of characters="+startUpName.length);
 
 /*The solution looks like this :
