@@ -13,12 +13,12 @@ let volumeInMetersPeter=width*depth*height;
     else{
         console.log( "Peter  is paying too much");
     }
-    width=5;
-     height=11;
-    depth=8;
-    gardenSizeInM2=72;
-     volumeInMetersJulia=width*depth*height;
-     housePriceJulia= volumeInMetersJulia * 2.5 * 1000 + gardenSizeInM2 * 300;
+    const width=5;
+    const height=11;
+    const depth=8;
+    const gardenSizeInM2=72;
+    volumeInMetersJulia=width*depth*height;
+    housePriceJulia= volumeInMetersJulia * 2.5 * 1000 + gardenSizeInM2 * 300;
             if(housePriceJulia<1000000){
             console.log( "Julia  is paying too little");
             }else if(housePriceJulia===1000000){
