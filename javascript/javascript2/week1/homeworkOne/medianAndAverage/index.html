@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>The price of houses</h1>
+    <ul id="mera">
+
+    </ul>
+    <h1>Difference between median and average</h1>
+    <script src="medianAndaverage.js"></script>
+    <script>
+      const arr = [1, 2, 3, 4, 5, 6];
+
+  const alpha = ['e', 'a', 'c', 'u', 'y'];
+
+  // sort in descending order
+  descOrder = arr.sort((a, b) => a > b ? -1 : 1);
+  console.log(descOrder); // output: [6, 5, 4, 3, 2, 1]
+
+  // sort in ascending order
+  ascOrder = alpha.sort((a, b) => a > b ? 1 : -1);
+  console.log(ascOrder); // output: ['a', 'c', 'e', 'u', 'y']
+ const name = 'frugence';
+  const nameArray = Array.from(name);
+
+  console.log(name); // output: frugence
+  console.log(nameArray); // output: ['f', 'r', 'u', 'g', 'e', 'n', 'c', 'e']
+  const lis = document.querySelectorAll('li');
+  const lisArray = Array.from(document.querySelectorAll('li'));
+
+  // is true array?
+  console.log(Array.isArray(lis)); // output: false
+  console.log(Array.isArray(lisArray));  // output: trues
+    </script>
+  </body>
+</html>
+
+
