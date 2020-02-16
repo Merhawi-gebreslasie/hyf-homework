@@ -13,7 +13,7 @@ export const TodoList = ({ todos }) => {
 
     const handleDelet = id =>{
         setItems(preTodos =>{
-            preTodos.filter((item, index) => index !== id);
+           return preTodos.filter((item, index) => index !== id);
         });
     }
 
