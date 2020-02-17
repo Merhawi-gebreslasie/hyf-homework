@@ -25,7 +25,6 @@ export const TodoList = ({ todos }) => {
             <div>
                 <AddTodosAndNoItems
                     addTodos={addTodos}
-                    todos={todos}
                     items={items}
                 />
             </div>
