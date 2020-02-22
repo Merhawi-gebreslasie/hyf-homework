@@ -25,6 +25,7 @@ function App() {
     <div className="App">
       <Header header='Todo list' />
       <TodoList 
+      Noitems='No items'
       todos={todos} />
       
 

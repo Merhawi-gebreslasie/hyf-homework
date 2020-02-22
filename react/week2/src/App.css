@@ -34,6 +34,8 @@ li{
 }
 .delete{
   background: rgb(0, 206, 201);
+  color:red;
+  font-weight: bolder;
 }
 input[type=checkbox] {
   transform: scale(2);

@@ -1,16 +1,13 @@
 import React from 'react';
-import { useState } from 'react'
-import DeleteIcon from '@material-ui/icons/Delete';
+import { useState } from 'react';
 
 export const TodoItem = (props) => {
 
     const [isDone, setisDone] = useState(false);
 
     const handleChange = () => {
-        setisDone(() => {
-            return !isDone;
-        })
-    };
+        setisDone(!isDone);
+    }
 
     return (
 
@@ -29,16 +26,11 @@ export const TodoItem = (props) => {
 
 
             <li>
-                <button className='delete' onClick={()=> props.handleDelet(props.id)}>
-                
-                    <DeleteIcon style={{ color: 'yellow' }} />
-
-                </button>
-
-
-
+                <button className='delete' onClick={() => props.handleDelet(props.id)}>
+                    Delete
+                    </button>
             </li>
 
         </div>
-    )
-};
+    );
+}
