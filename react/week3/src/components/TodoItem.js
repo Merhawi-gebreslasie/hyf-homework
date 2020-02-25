@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 // import { Border } from "./Border";
-
+import PropTypes from "prop-types';
 export const TodoItem = (props) => {
     // Destracturing assignmentExpression
     const { description, deadline, handleDelet, handleEdit } = props;
@@ -47,10 +47,11 @@ export const TodoItem = (props) => {
     );
 }
 
-// TodoItem.propTypes={
-//     description:PropTypes.string,
-//     deadline:PropTypes.instanceOf(Date),
-//     handleDelet:PropTypes.func.isRequired,
-//     handleEdit:PropTypes.func.isRequired,
-//     isDone:PropTypes.bool
-// }
+TodoItem.propTypes={
+    description:PropTypes.string.isRequired,
+    deadline:PropTypes.instanceOf(Date).isRequired,
+    handleDelet:PropTypes.func.isRequired,
+    handleEdit:PropTypes.func.isRequired,
+
+    isDone:PropTypes.bool.isRequired
+}
