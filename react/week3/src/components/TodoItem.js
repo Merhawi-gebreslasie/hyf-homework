@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-// import { Border } from "./Border";
+// import { ChildrenForBorder } from "./ChildrenForBorder";
 import PropTypes from "prop-types';
 export const TodoItem = (props) => {
     // Destracturing assignmentExpression
@@ -19,7 +19,7 @@ export const TodoItem = (props) => {
     return (
         <div className="items">
 
-        
+        <ChildrenForBorder>
         <li style={{ textDecoration: isDone ? "line-through" : "none" }}>
         {isEdit ? (
             <input onChange={handleEdit} value={description} />
@@ -42,7 +42,7 @@ export const TodoItem = (props) => {
             <span>{!isEdit ? <span>Edit </span> : <span>update</span>}</span>
         </button>
     </li>
- 
+ </ChildrenForBorder>
         </div>
     );
 }
