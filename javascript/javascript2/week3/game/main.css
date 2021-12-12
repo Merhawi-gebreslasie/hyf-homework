@@ -1,0 +1,64 @@
+/*
+
+.key{
+    display: flex;
+
+}
+.key div, p{
+
+    margin-right:5%;
+ background-color:rgb(223, 229, 241);
+ width: 50%;  
+ height: 70%;
+ text-align: center;
+}
+#gameInput{
+    
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        z-index: -1;
+        top: 20px;
+        left: 8px;
+        font-size: 17px;
+        color: #b8b8b8;
+      margin-left: 33%;
+      width: 20%;
+}
+#gameBtn{
+        font-size: 16px;
+        margin: 4px 2px;
+        background-color: #4CAF50;
+        border: 5px;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        cursor: pointer;
+    font-weight: bold;
+        position: relative;
+        margin-left: 43%;
+}
+.pressL div{
+position: absolute;
+    height: 45%;
+    width: 45%;
+    border: rgb(7, 75, 211);
+    border-width: 1px;
+align-items: center;
+}
+.pressS div{
+    position:absolute;
+        height: 45%;
+        width: 45%;
+        align-items: center;
+    
+}
+    
+    p{
+        position: relative;
+        align-items: center;
+        
+    }*/
