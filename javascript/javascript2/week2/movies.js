@@ -40,15 +40,7 @@ let countNumbers=movies.filter(movie=>{
         return true
     }
 }).map(movie=>movie.title)
-console.log(countNumbers);
-
-const arrayWithWordDuplicate = movies
-    .map(movie => movie.title)
-    .filter(movie => { 
-      let text = movie.split(" ");
-      return text.some(function(v,i,a){return a.lastIndexOf(v)!=i;})
-    });
-console.log('duplicate words'+arrayWithWordDuplicate);
+console.log(countNumbers)
 const hasDuplicates=
     movies.map(movie=>movie.title).filter(movie=>{
         let words=movie.split(' ');
