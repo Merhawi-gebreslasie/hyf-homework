@@ -1,55 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <title>Game</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <title>Game</title>
 </head>
+
 <body>
-   <div>
-<header >
+  <header>
 
-        <h1>Game</h1> 
+    <h1>play <span>-Game</span> </h1>
 
-    
-</header>
 
-   </div>
-  <div><p></p></div>
- <section class="setInput">
+  </header>
 
-     <div class="input">
-   
-        
-        <input id="gameInput" type="number" min='1' max="10" step="10" value="4" placeholder="set seconds"/>
-     </div>
-    <section class="choose">
-        <div></div>
+  <main>
+
+    <section class="play-game" id='addRestart'>
+
+      <div class="set-input">
+        <input id="gameInput" type="number" min='1' max="10" step="10" placeholder="set seconds" />
+      </div>
+
+      <div class="start-buttun" id="startBtnDiv">
+        <button id="startBtn">Start game</button>
+      </div>
+
     </section>
-     <div class="buttun">
-   
-         <button id="gameBtn">Start game</button>
-     </div>
- </section>
 
-<section class="key">
+    <section class="display-result">
+      <div id="output"></div>
+    </section>
 
+    <section class="key-press" id="keyPressSection">
+      <div class="pressS-container" id="containerForS">
+        <div id="pressForS"></div>
+        <div id="countForS"></div>
+      </div>
+      <div class="pressL-container"  id="containerForL">
+        <div id="pressForL"></div>
+        <div id="countForL"></div>
+      </div>
+    </section>
+  </main>
+  <script src="main.js"></script>
+</body>
 
-  <div class="pressL">
-    <div>
-  
-    </div>
-    <P id="pL"></P>
-  
-  </div>
-  <div class="pressS">
-    <div></div>
-    <P id="pS">
-  
-    </P></div>
-</section>
-<script src="main.js"></script>
-</body>     
 </html>

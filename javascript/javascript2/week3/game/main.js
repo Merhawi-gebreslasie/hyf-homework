@@ -1,24 +1,28 @@
+const holdL = document.querySelector("#countForL");
+const holdS = document.querySelector("#countForS");
+const output = document.querySelector("#output");
+const input = document.querySelector("#gameInput");
+const startButton = document.querySelector("#startBtn");
+const pressL = document.querySelector("#pressForL");
+const pressS = document.querySelector("#pressForS");
+const containerForS=document.querySelector('#containerForS');
+const containerForL=document.querySelector('#containerForL');
 
-let holdL = document.querySelector("#pL");
-let holdS = document.querySelector("#pS");
-let h1 = document.createElement("h1");
-let input = document.querySelector("#gameInput");
-let button = document.querySelector("#gameBtn");
-let pressL = document.querySelector(".pressL div");
-let pressS = document.querySelector(".pressS div");
-const btn = document.createElement("button");
-const divForButton=document.querySelector(' section .choose')
+let sectionPress=document.querySelector('#keyPressSection')
 
-const countDownButton=document.createElement('button');
-countDownButton.innerHTML='count down'
-button.innerHTML='Start game'
-btn.innerHTML = "Start a new Game";
+const restartBtnDiv = document.createElement("div");
+const restartButton = document.createElement("button");
+const restartSection = document.querySelector("#addRestart");
+restartBtnDiv.classList.add("restart-button");
+restartButton.innerHTML = "Start a new Game";
+
+const startBtnDiv = document.querySelector("#startBtnDiv");
+startButton.innerHTML = "Start game";
 pressL.innerHTML = "Press L";
 pressS.innerHTML = "Press S";
 
 let countL = 0;
 let countS = 0;
-
 const handlePress = (e) => {
     let key = e.key.toLowerCase();
     
@@ -30,45 +34,72 @@ const handlePress = (e) => {
     }
 };
 
-const startNewGame = () => {
-    countL = 0;
-    countS = 0;
-
-    renderGameOver(input.value)
-};
 const getWinner = () => {
     if (countL < countS) {
-        h1.innerHTML = "S is the winner with a score " + countS;
+        output.innerHTML =
+        "Game over ,S clicked highest  with a  score of  " + (countS - 1);
+        
+        containerForS.classList.add('animate-S')
+        document.body.classList.add("animate");
+        containerForL.style.visibility='hidden'
     }
     if (countL > countS) {
-        h1.innerHTML = "L is the winner with a score " + countL;
+        output.innerHTML =
+        "Game over ,L clicked highest  with a  score of  " + (countL - 1);
+        document.body.classList.add("animate");
+        containerForL.classList.add('animate-L')
+        containerForS.style.visibility='hidden'
+
     }
     
     if (countL == countS) {
-        h1.innerHTML = "Draw";
+        output.innerHTML = "Game over,Draw with score of " + (countS - 1);
+        document.body.classList.add("animate");
+
+        
     }
     if (countL == 0 && countS == 0) {
-        h1.innerHTML = "No key pressed";
+        output.innerHTML = "Game over,No key pressed";
+        sectionPress.style.visibility='hidden'
+
     }
-    
-    document.body.appendChild(h1);
 };
 
 const getOutput = () => {
     document.removeEventListener("keypress", handlePress);
-    document.body.appendChild(btn);
-    btn.addEventListener("click", startNewGame)
-    button.style.display='none'
+    restartBtnDiv.appendChild(restartButton);
+    restartSection.appendChild(restartBtnDiv);
+    startBtnDiv.style.display = "none";
+
     getWinner();
 };
 
-    
+const startNewGame = () => {
+  output.innerHTML = "";
+  holdL.innerHTML='';
+  holdS.innerHTML='';
+  countS = 0;
+  countL = 0;
+  containerForL.classList.remove('animate-L')
+  containerForS.classList.remove('animate-S')
+  sectionPress.style.visibility='visible'
+  containerForL.style.visibility='visible'
+  containerForS.style.visibility='visible'
   
 
-function renderGameOver(timeDelay) {
-   document.addEventListener("keypress", handlePress);
-   
- setTimeout(getOutput,timeDelay* 1000);
+  document.body.classList.remove("animate");
+  renderGameOver();
+};
 
+function renderGameOver() {
+    if(input.value){
+
+        document.addEventListener("keypress", handlePress);
+      
+        setTimeout(getOutput, input.value * 1000);
+    }else{
+        output.innerHTML='Set your timer'
+    }
 }
-button.addEventListener('click',()=>renderGameOver(input.value))
+startButton.addEventListener("click", renderGameOver);
+restartButton.addEventListener("click", startNewGame);
