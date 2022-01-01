@@ -1,5 +1,5 @@
-let pWords=['happy', 'awesome', 'super'];
-let nWords=['hate','boring','tired'];
+let postWords=['happy', 'awesome', 'super'];
+let negtWords=['hate','boring','tired'];
 function getSentimentScore(str){
     let obj={
         scrore:0,
@@ -10,11 +10,11 @@ function getSentimentScore(str){
     console.log(parameterString);
 for(let i=0;i<parameterString.length;i++){
 let word=parameterString[i];
-if(pWords.includes(word)){
+if(postWords.includes(word)){
     obj.scrore++;
     obj.positiveWords.push(word);
 } 
-if(nWords.includes(word)){
+if(negtWords.includes(word)){
     obj.scrore--;
     obj.negativeWords.push(word);
     return obj;
