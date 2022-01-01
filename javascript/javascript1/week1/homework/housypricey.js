@@ -3,7 +3,7 @@
 
 let [height1, length1, width1,gardenSizeInM2]=[10,10,8,100]
 
-let gardenSizeInM2;
+
 
 
 let volumeInMeters = height1 * length1 * width1;
