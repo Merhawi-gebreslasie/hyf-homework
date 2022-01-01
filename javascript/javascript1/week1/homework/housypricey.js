@@ -1,11 +1,13 @@
-let h, l, w;
+
+//For  Peter
+
+let [height1, length1, width1,gardenSizeInM2]=[10,10,8,100]
+
 let gardenSizeInM2;
-//for Peter
-l = 10;
-h = 10;
-w = 8;
-let volumeInMeters = h * l * w;
-gardenSizeInM2 = 100;
+
+
+let volumeInMeters = height1 * length1 * width1;
+
 const estimatedPrice=25000000;
 let housePrice = volumeInMeters * 2.5 * 1000 + gardenSizeInM2 * 300;
 if (housePrice < estimatedPrice) {
@@ -17,11 +19,9 @@ if (housePrice < estimatedPrice) {
 }
 
 //for Julia
-let lJ = 11;
-let wJ = 5;
-let hJ = 8;
-let volumeInMetersForJulia = h * l * w;
-let gardenSizeInM2ForJulia = 70;
+let [height2, length2, width2,gardenSizeInM2ForJulia]=[11,5,8,70]
+
+let volumeInMetersForJulia = height2 * length2 * width2;
 let housePriceForJulia =
   volumeInMetersForJulia * 2.5 * 1000 + gardenSizeInM2ForJulia * 300;
 const estimatedPriceForJulia=1000000;
@@ -34,8 +34,8 @@ if (housePriceForJulia < estimatedPriceForJulia) {
 }
 
 //advanced
-function pirceEstimater(estimatedPrice, gardenSizeInM2, l, h, w, Name) {
-  let volumeInMeters = l * h * w;
+function pirceEstimater(estimatedPrice, gardenSizeInM2, length, height, width, Name) {
+  let volumeInMeters = length * hight * width;
   let housePrice = volumeInMeters * 2.5 * 1000 + gardenSizeInM2 * 300;
   if (housePrice < estimatedPrice) {
     console.log(Name + " paid too little :only " +housePrice);
