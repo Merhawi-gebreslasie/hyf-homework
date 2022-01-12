@@ -2,9 +2,9 @@ const products = getAvailableProducts();
 const productsUl = document.querySelector('section.products ul');
 console.log(productsUl);
 
-const inputName = document.querySelector(".search #myInputName");
-const inputPrice = document.querySelector(".table-view-control #myInputPrice");
-const sortBy = document.querySelector(".sort select");
+const inputName = document.querySelector("#myInputName");
+const inputPrice = document.querySelector("#myInputPrice");
+const sortBy = document.querySelector("#selectPrice");
 /*function appendLi(label) {
   const createLi = document.createElement("li");
   createLi.innerText = label;
