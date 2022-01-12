@@ -4,19 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sprit animal generator</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Sprit Animal names</title>
 </head>
 <body>
-    <input type="text">
-    <select id="mySelect" size="3">
-        <option>select</option>
-        <option >click button</option>
-        <option > hover text</option>
-        <option >write text only</option>
-    </select>
-    <button id="btn">Sprit animal names</button>
-    <button id="newbtn">Add sprit animal name</button>
-    <h1></h1>
-    <script src="spritname.js"></script>
+    
+    <header>
+        <h1>Sprit animal generator</h1>
+    </header>
+    <section class="sprit-animal-container">
+        <div class="generate">
+    
+            <input type="text" placeholder="Enter your name">
+        </div>
+        
+
+            <select id="mySelect" >
+                <option value="choose">choose your option</option>
+                <option value="click" >click</option>
+                <option value="mouseover"> hover </option>
+                <option value="keyup">input</option>
+            </select>
+        
+
+            
+        
+    </section>
+        <section class="sprit-animal-button">
+            <div class="name-button">
+
+                <button id="btn">Set name - and sprit anmimal</button>
+            </div>
+            <div class="add-sprit-animal-button">
+
+                <button id="newSpritAnimalbtn">Generate new sprit amimal</button>
+            </div>
+    
+        </section>
+        <div class="sprit-animal-name">
+    
+            <h1 id="name"></h1>
+        </div>
+<script src="spritname.js"></script>
 </body>
 </html>

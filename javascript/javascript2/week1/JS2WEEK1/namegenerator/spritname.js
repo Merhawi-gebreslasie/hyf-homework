@@ -1,8 +1,9 @@
-let btn = document.querySelector("#btn");
-let newbtn = document.querySelector("#newbtn");
-let textHolder = document.querySelector("h1");
+let nameButton = document.querySelector("#btn");
+console.log('HELLO WORLD');
+let generateSpritAnimalButton = document.querySelector("#newSpritAnimalbtn");
+let textHolder = document.querySelector("#name");
 let textInput = document.querySelector("input");
-let mySelect = document.querySelector("#mySelect");
+let mySelect=document.querySelector('#mySelect')
 let spritAnimals = [
   "huge elephant",
   "butterfly",
@@ -15,35 +16,53 @@ let spritAnimals = [
   "bee",
   "Cheetah",
 ];
+console.log(spritAnimals[0]);
+let random=Math.floor(Math.random()*spritAnimals.length)
+  const setNameAndSpritAnimal=()=>{
+textHolder.innerHTML=textInput.value+'-'+spritAnimals[random]
+  }
+ 
+
 function getNewSpritAnimal() {
   let randomIndex = Math.floor(Math.random() * spritAnimals.length);
   let newSpritAnimal = spritAnimals[randomIndex];
-  textInput.value
-    ? (textHolder.innerHTML = textInput.value + "-" + newSpritAnimal)
-    : (textHolder.innerHTML = "Write down your Name in the input field");
-}
+  if(textInput.value){
 
-function renderSpritAnimalNames(selectedButton, events) {
-  selectedButton.addEventListener(events, function (event) {
-    let option = mySelect.options[mySelect.selectedIndex].text;
+    (textHolder.innerHTML = textInput.value + "-" + newSpritAnimal)
+  }
+    else{
 
-    if (selectedButton == textInput && option == "hover text") {
+      (textHolder.innerHTML = "Write down your Name in the input field");
+    }
+  }
+
+
+ 
+  
+  
+  
+  
+  function renderSpritAnimalNames(selectedButton, events) {
+    selectedButton.addEventListener(events, function (event) {
+      let selectedOption = mySelect.options[mySelect.selectedIndex].value;
+      if (selectedButton == nameButton&&selectedOption=='click') {
+      setNameAndSpritAnimal()
+      }
+      if (selectedButton == generateSpritAnimalButton && selectedOption == "click") {
+        getNewSpritAnimal();
+      }
+
+    if (selectedButton == textInput && (selectedOption == 'mouseover'||selectedOption=='keydown')) {
       getNewSpritAnimal();
     }
-    if (selectedButton == textInput && option == "write text only") {
-      getNewSpritAnimal();
-    }
+   
 
-    if (selectedButton == btn) {
-      textHolder.innerHTML = textInput.value;
-    }
-    if (selectedButton == newbtn && option == "click button") {
-      getNewSpritAnimal();
-    }
   });
 }
-renderSpritAnimalNames(btn, "click");
-renderSpritAnimalNames(newbtn, "click");
+renderSpritAnimalNames(nameButton, "click");
+renderSpritAnimalNames(generateSpritAnimalButton, "click");
 renderSpritAnimalNames(textInput, "mouseover");
-renderSpritAnimalNames(textInput, "input");
-//optional
+renderSpritAnimalNames(textInput, "input")
+
+  
+  //optional 
