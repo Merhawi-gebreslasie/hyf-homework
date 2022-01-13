@@ -27,7 +27,7 @@ const getWeatherReportByLatAndLong = () => {
 };
 
 const getLocationFromLocalStorage = () => {
-  let savedLocation = JSON.parse(localStorage.getItem("notes"));
+  let savedLocation = JSON.parse(localStorage.getItem("weather"));
 
   if (savedLocation) {
     const randomIndex = Math.floor(Math.random() * savedLocation.length);
@@ -38,7 +38,7 @@ const getLocationFromLocalStorage = () => {
   }
 };
 const saveToLocalStorage = (name, temp, speed, sunrise, sunset, all, icon) => {
-  let localStore = {
+  let localWeatherStore = {
     name,
     temp,
     speed,
@@ -48,11 +48,11 @@ const saveToLocalStorage = (name, temp, speed, sunrise, sunset, all, icon) => {
     icon: `https://openweathermap.org/img/wn/${icon}@2x.png`,
   };
 
-  let notesStorage = localStorage.getItem("notes")
-    ? JSON.parse(localStorage.getItem("notes"))
+  let weatherStorage = localStorage.getItem("weather")
+    ? JSON.parse(localStorage.getItem("weather"))
     : [];
-  notesStorage.push(localStore);
-  localStorage.setItem("notes", JSON.stringify(notesStorage));
+  weatherStorage.push(localWeatherStore);
+  localStorage.setItem("weather", JSON.stringify(weatherStorage));
 };
 function getWeatherReport(url) {
   fetch(url)
