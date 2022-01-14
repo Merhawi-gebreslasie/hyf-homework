@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <title>Game</title>
+</head>
+
+<body>
+  <header>
+
+    <h1>play <span>-Game</span> </h1>
+
+
+  </header>
+
+  <main>
+
+    <section class="play-game" id='addRestart'>
+
+      <div class="set-input">
+        <input id="gameInput" type="number" min='1' max="10" step="10" placeholder="set seconds" />
+      </div>
+
+      <div class="start-buttun" id="startBtnDiv">
+        <button id="startBtn">Start game</button>
+      </div>
+
+    </section>
+
+    <section class="display-result">
+      <div id="output"></div>
+    </section>
+
+    <section class="key-press" id="keyPressSection">
+      <div class="pressS-container" id="containerForS">
+        <div id="pressForS"></div>
+        <div id="countForS"></div>
+      </div>
+      <div class="pressL-container"  id="containerForL">
+        <div id="pressForL"></div>
+        <div id="countForL"></div>
+      </div>
+    </section>
+  </main>
+  <script src="main.js"></script>
+</body>
+
+</html>
