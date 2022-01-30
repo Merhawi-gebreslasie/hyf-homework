@@ -1,0 +1,17 @@
+{
+  "dog": {
+    "name": "Lily",
+    "age": 10,
+    "weight": "12kg",
+    "children": [
+      { "name": "Lucy", "age": 3, "weight": "6kg" },
+      { "name": "Daizy", "age": 3, "weight": "6kg" }
+    ]
+  },
+  "cat": {
+    "name": "Bella",
+    "age": 6,
+    "weight": "4kg",
+    "children": [{ "name": "Stela", "age": 3, "weight": "3kg" }]
+  }
+}
