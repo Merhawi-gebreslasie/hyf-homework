@@ -4,22 +4,22 @@ const movies =
 const fetchData = () => {
   fetch(movies)
     .then((res) => res.json())
-    .then((data) => {
-      const badMovies = data
-        .filter((movie) => movie.rating < 3)
-        .map((movie) => {
-          movie.bad = "bad";
-          return movie;
-        });
-      console.log("bad movies: ", badMovies);
+    .then((data) => data.filter((movie) => movie.rating < 3))
+    .then((badMovies) =>
+      badMovies.map((movie) => {
+        movie.bad = "bad";
+        return movie;
+      })
+    )
+    .then((badMovies) => {
       const filteredBadMovies = badMovies.filter((movie) => movie.year > 2000);
       console.log("bad movies >2000: ", filteredBadMovies);
     });
 };
 fetchData();
 
-async function getResolve(resolveAfter) {
-  return await new Promise((resolve) => {
+function getResolve(resolveAfter) {
+  return new Promise((resolve) => {
     setTimeout(() => resolve(), resolveAfter * 1000);
   });
 }
@@ -70,36 +70,22 @@ getCurrentLocation()
 
 const astronods = "http://api.open-notify.org/astros.json";
 function fetchPromise() {
-  return new Promise((resolve, reject) => {
-    fetch(astronods)
-      .then((astronod) => astronod.json())
-      .then((astronod) => {
-        if (astronod) {
-          setTimeout(() => resolve(astronod), 3000);
-        } else {
-          setTimeout(() => reject("fetching astronods goes wrong"), 3000);
-        }
-      });
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(fetch(astronods)), 3000);
   });
 }
 fetchPromise()
-  .then((result) => {
-    console.log("fecthing sing promise and .then");
-    console.log(result);
-  })
-  .catch((err) => console.log(err));
+  .then((res) => res.json())
+  .then((result) => console.log(result));
 
 //using async/await
-async function fetchUsingAsyncAwait() {
-  try {
-    const listAstronods = await fetch(astronods);
-    const astronodResult = await listAstronods.json();
-    setTimeout(
-      () => console.log("fetching using async/await: ", astronodResult),
-      3000
-    );
-  } catch (err) {
-    setTimeout(() => console.log(err), 3000);
-  }
+
+async function fetchAsyncAwait() {
+  const promise = new Promise((resolve) => {
+    setTimeout(() => resolve(fetch(astronods)), 3000);
+  });
+  const response = await promise;
+  const result = await response.json();
+  console.log(result);
 }
-fetchUsingAsyncAwait();
+fetchAsyncAwait();
