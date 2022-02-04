@@ -1,0 +1,32 @@
+*{
+  padding: 0;
+  margin-left: 10px;
+  box-sizing: border-box;
+}
+.container{
+  display: flex;
+}
+.shoping_cart{
+
+  width: 50%;
+   height: 50%;
+  }
+  .shoping_cart ul{
+
+    font-size: large;
+    width: 50%;
+    
+  list-style: none;
+}
+.shoping_cart ul :nth-child(even){
+  background-color: rgb(247, 246, 245);
+font-size: small;
+}
+.render-currency ,ul{
+
+  list-style: none;
+
+  margin-right: 20%;
+}
+.render-currency{
+}
