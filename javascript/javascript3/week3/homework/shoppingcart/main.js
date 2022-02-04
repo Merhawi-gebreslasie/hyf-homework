@@ -34,7 +34,7 @@ class Product {
           productCurrency.appendChild(holdCurrency)
         }
       }
-    });
+    }).catch(err=>console.log('fetching went wrong');
     return response;
   }
 }
