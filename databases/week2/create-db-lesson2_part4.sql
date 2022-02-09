@@ -17,7 +17,7 @@ CREATE TABLE ´ member ´(
   ´ Adress ´ VARCHAR(255) NOT NULL,
   ´ Phone ´ VARCHAR(255) NOT NULL,
   ´ Email ´ VARCHAR(255) NOT NULL,
-  ´ card_id ´ INT(10) UNSIGNED NOT,
+  ´ card_id ´ INT(10) UNSIGNED NOT NULL,
   PRIMARY KEY (´ id ´),
   CONSTRAINT ´ fk_card ´ FOREIGN KEY (´ card_id ´) REFERENCES ´ card ´(´ id ´) ON DELETE CASCADE
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
