@@ -7,7 +7,7 @@ SELECT name FROM user
 WHERE id=10
 ;
 -- 3
-SELECT COUNT(*) FROM user;
+SELECT COUNT(id) FROM user;
 -- 4
 SELECT name FROM user
 LIMIT 5;
@@ -28,12 +28,12 @@ SELECT task.title FROM user
 JOIN task ON task.user_id=user.id 
    AND user.name REGEXP 'Maryrose';
 -- 10
-SELECT user.name, COUNT(id) AS count 
+SELECT user.name, COUNT(user.id) AS count 
 FROM user 
 JOIN task ON   task.user_id=user.id
 GROUP BY user.name;
 -- 11
-SELECT user.name, COUNT(id) AS count_done 
+SELECT user.name, COUNT(user.id) AS count_done 
 FROM user 
 JOIN task ON   task.user_id=user.id
 JOIN status ON task.status_id=status.id
