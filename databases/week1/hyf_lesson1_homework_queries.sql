@@ -1,9 +1,9 @@
 USE hyf_lesson1;
 -- 1
-SELECT COUNT(*) AS 'count task '
+SELECT COUNT(id) AS 'count task '
  FROM task;
  -- 2
-SELECT  COUNT(*) AS 'count task '
+SELECT  COUNT(id) AS 'count task '
  FROM task
  WHERE due_date IS NULL;
  -- 3
@@ -32,12 +32,12 @@ SELECT task.title,status.name AS text
 FROM task 
 JOIN status; 
 -- 9
-SELECT status.name,COUNT(id) AS frequency 
+SELECT status.name,COUNT(task.id) AS frequency 
 FROM task 
 JOIN status ON task.status_id=status.id
 GROUP BY status.name;
 -- 10
-SELECT status.name,COUNT(*) AS frequency 
+SELECT status.name,COUNT(task.id) AS frequency 
 FROM task 
 JOIN status ON task.status_id=status.id
 GROUP BY status.name
