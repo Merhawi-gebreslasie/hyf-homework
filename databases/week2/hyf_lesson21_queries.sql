@@ -1,4 +1,5 @@
 -- Part 3
+
 USE hfy_lesson21;
 SELECT *
 FROM user

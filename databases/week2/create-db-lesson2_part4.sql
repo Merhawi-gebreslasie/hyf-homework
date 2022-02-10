@@ -1,4 +1,5 @@
 -- part4
+
 CREATE DATABASE hyf_lesson2_part4;
 USE hyf_lesson2_part4;
 SET NAMES utf8mb4;

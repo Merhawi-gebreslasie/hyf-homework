@@ -1,7 +1,5 @@
 -- part2
 USE hyf_lesson1;
-
-
 insert into task(
     title,
     description,
@@ -20,7 +18,6 @@ values(
     3,
     2
   );
-
 UPDATE task
 SET title = 'Develop a website'
 WHERE id = 1;
@@ -28,14 +25,11 @@ WHERE id = 1;
 UPDATE task
 SET due_date = '2022-05-06 19:39:16'
 WHERE id = 1;
-
 UPDATE task
 SET status_id = 1
 WHERE id = 1;
-
 UPDATE task
 SET status_id = 3
 WHERE id = 1;
-
 DELETE FROM task
 WHERE id = 1;
