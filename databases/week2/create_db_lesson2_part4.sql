@@ -34,7 +34,7 @@ CREATE TABLE ´ bike ´(
   ´ id ´ int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   ´ made_in ´ VARCHAR(255) NOT NULL,
   ´ quality ´ VARCHAR(255),
-  ´ date_of_manufacture ´ DATETIME,
+  ´ date ´ DATETIME,
   PRIMARY KEY(´ id ´),
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 CREATE TABLE ´ bike_rent ´(
