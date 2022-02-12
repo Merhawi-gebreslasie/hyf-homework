@@ -30,7 +30,7 @@ SELECT  COUNT(id) AS 'count task '
 
 SELECT task.title,status.name AS text 
 FROM task 
-JOIN status; 
+JOIN status ON task.status_id=status.id; 
 -- 9
 SELECT status.name,COUNT(task.id) AS frequency 
 FROM task 
