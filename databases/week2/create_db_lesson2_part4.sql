@@ -7,7 +7,7 @@ CREATE TABLE card(
   last_name VARCHAR(255) NOT NULL,
   address VARCHAR(255) NOT NULL,
   postal_code VARCHAR(255) NOT NULL,
-  date_of_birth DATETIME NOT NULL,
+  date_of_birth DATE NOT NULL,
   PRIMARY KEY(id)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 CREATE TABLE ´ member ´(
@@ -23,8 +23,8 @@ CREATE TABLE ´ member ´(
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 CREATE TABLE ´ rent ´(
   ´ id ´ int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  ´ rent_date ´ DATETIME NOT NULL,
-  ´ expire_date ´ DATETIME NOT NULL,
+  ´ rent_date ´ DATE NOT NULL,
+  ´ expire_date ´ DATE NOT NULL,
   ´ total_cost ´ INT NOT NULL member_id INT(10) NOT NULL,
   ´ memeber_id ´ INT(10) UNSIGNED NOT NULL,
   PRIMARY KEY(´ id ´),
