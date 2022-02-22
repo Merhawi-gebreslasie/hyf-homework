@@ -2,11 +2,14 @@ USE hyf_lesson3;
 
 SELECT *
 FROM  meal 
-WHERE  price  < 40;
-SELECT *
-FROM  meal 
-WHERE  max_reservations  >= 1;
-SELECT *
+WHERE  price < 400;
+SELECT  meal.id,meal.title,meal.description,meal.location,meal.when,meal.price,meal.created_date,meal.max_reservations,SUM(reservation.number_of_guests) AS guests
+FROM  meal  
+ JOIN  reservation ON meal.id = reservation.meal_id
+GROUP By meal.id
+HAVING  guests < meal.max_reservations;
+
+SELECT * 
 FROM  meal 
 WHERE  title  LIKE 'Rød grød med%';
 SELECT *

@@ -9,7 +9,7 @@ INSERT INTO `meal`(
     `title`,
     `description`,
     `location`
-  )
+)
 VALUES(
     3,
     30,
@@ -76,4 +76,4 @@ SET title = 'Indian Tasty',
   stars = 5
 WHERE id = 2;
 DELETE FROM review
-WHERE id = 2;
+WHERE id = 2; 
