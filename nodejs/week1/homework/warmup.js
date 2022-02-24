@@ -4,15 +4,15 @@ class Circle{
     this.radius=radius;
   }
   getDiameter(){
-   console.log('Daimeter: '+2*this.radius);
-   
+   console.log( 'Diameter: '+2*this.radius);
+   return 2
   }
   getCircumference(){
     
-    console.log('Circumference: '+Math.round(2*Math.PI*this.radius));
+    console.log('Circumference: '+(2*Math.PI*this.radius).toFixed(2));
   }
   getArea(){
-    console.log('Area: '+ Math.round(2*Math.PI*this.radius**2));
+    console.log('Area: '+ (Math.PI*this.radius**2).toFixed(2));
 
   }
 }
