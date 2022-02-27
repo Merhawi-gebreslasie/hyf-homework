@@ -12,39 +12,39 @@ const reservations = require("./data/reservations.json");
 const randomElement = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
 const mealsWithReviews = meals.map((meal) => {
+  const {id,maxNumberOfGuests,title,description,price,createdAt}=meal;
   return {
-    id: meal.id,
-    maxNumberOfGuests: meal.maxNumberOfGuests,
-    title: meal.title,
-    description: meal.description,
+    id,maxNumberOfGuests,title,description,
     time: 12 + meal.id,
     address: "Vestagade " + meal.id,
-    price: meal.price,
+    price,
     reviews: reviews.filter((review) => review.mealId === meal.id),
-    createdAt: meal.createdAt,
+    createdAt,
   };
-});
-console.log(mealsWithReviews);
+  });
+  console.log(mealsWithReviews);
+
+const largeMeals = mealsWithReviews.filter(
+  (largeMeal) => largeMeal.maxNumberOfGuests > 7
+  );
+
+const cheapMeals = mealsWithReviews.filter(
+   (meal) => (meal.price / meal.maxNumberOfGuests) < 15
+);
 
 app.get("/", async (request, response) => {
-  response.send("Meal Sharing Web App");
-});
+    response.send("Meal Sharing Web App");
+  });
 
 app.get("/meals", async (request, response) => {
   response.json( mealsWithReviews);
 });
 
 app.get("/cheap-meals", async (request, response) => {
-  const cheapMeals = mealsWithReviews.filter(
-    (meal) => (meal.price / meal.maxNumberOfGuests) < 15
-  );
   response.json(cheapMeals);
 });
 
 app.get("/large-meals", async (request, response) => {
-  const largeMeals = mealsWithReviews.filter(
-    (largeMeal) => largeMeal.maxNumberOfGuests > 7
-  );
   response.json(largeMeals);
 });
 
