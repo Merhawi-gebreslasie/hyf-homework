@@ -1,0 +1,26 @@
+[
+    {
+        "id" : 1,
+        "title" : "Indian food in the summer",
+        "maxNumberOfGuests" : 5,
+        "description" : "A nice night out eating delicious indian food",
+        "createdAt" : "2019/12/7 14:34",
+        "price" : 67
+    },
+    {
+        "id" : 2,
+        "title" : "Italian fun food",
+        "maxNumberOfGuests" : 8,
+        "description" : "Everyone is happy eating delicious Italian food",
+        "createdAt" : "2021/02/7 6:00",
+        "price" : 140
+    },
+    {
+        "id" : 1,
+        "title" : "Chineese shushi",
+        "maxNumberOfGuests" : 2,
+        "description" : "A nice night out eating delicious Chineese food",
+        "createdAt" : "2022/02/7 6:34",
+        "price" : 30
+    }
+]
