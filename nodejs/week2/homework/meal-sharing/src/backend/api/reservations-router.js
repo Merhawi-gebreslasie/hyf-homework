@@ -12,18 +12,18 @@ const reservations = async (request, response) => {
   }
 };
 
-const reservation = async (request, response) => {
+const reservationById = async (request, response) => {
   try {
     const id = Number(request.params.id);
+    
+    if (isNaN(id)) {
+      return response
+      .status(400)
+      .json({ error: `Id ${request.params.id}  is not a number` });
+    }
     const singleReservation = allReservations.find(
       (reservation) => reservation.id === id
     );
-
-    if (isNaN(id)) {
-      return response
-        .status(400)
-        .json({ error: `Id ${request.params.id}  is not a number` });
-    }
     if (!singleReservation) {
       return response.status(400).json({ error: `Id  ${id} ,not found` });
     }
@@ -36,6 +36,6 @@ const reservation = async (request, response) => {
 };
 
 router.get("/", reservations);
-router.get("/:id", reservation);
+router.get("/:id", reservationById);
 
 module.exports = router;

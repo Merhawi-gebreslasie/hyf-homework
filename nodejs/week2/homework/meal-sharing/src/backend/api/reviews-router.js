@@ -12,18 +12,18 @@ const reviews = async (request, response) => {
   }
 };
 
-const review = async (request, response) => {
+const reviewById = async (request, response) => {
   try {
     const id = Number(request.params.id);
 
-    const singleReview = allReviews.find((review) => review.id === id);
-
+    
     if (isNaN(id)) {
       return response
-        .status(400)
-        .json({ error: `Id  ${request.params.id}  is not a number` });
+      .status(400)
+      .json({ error: `Id  ${request.params.id}  is not a number` });
     }
-
+    
+    const singleReview = allReviews.find((review) => review.id === id);
     if (!singleReview) {
       return response.status(400).json({ error: `Id  ${id}  does not exist` });
     }
@@ -36,6 +36,6 @@ const review = async (request, response) => {
 };
 
 router.get("/", reviews);
-router.get("/:id", review);
+router.get("/:id", reviewById);
 
 module.exports = router;
