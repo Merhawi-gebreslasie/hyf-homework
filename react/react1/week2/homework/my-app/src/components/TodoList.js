@@ -5,36 +5,30 @@ import { AddTodoItem } from "./AddTodoItem";
 export const TodoList = ({ todos }) => {
   const [items, setItems] = useState(todos);
 
-  
-  const addTodos = (newTodo) => {
-   return setItems((preTodos) => [...preTodos, newTodo]);
+  const addTodo = (newTodo) => {
+    return setItems((preTodos) => [...preTodos, newTodo]);
   };
 
   const handleDelete = (id) => {
-      
     // setItems((preTodos) => preTodos.filter((item,index) => index !== id));
-    const preTodos=items;
-    preTodos.splice(id,1)
-     setItems([...preTodos])
+    const preTodos = items;
+    preTodos.splice(id, 1);
+    setItems([...preTodos]);
   };
 
   return (
     <div className="lists">
       <div>
-      <AddTodoItem 
-      addTodos={addTodos}
-      items={items} />
-       
-
+        <AddTodoItem addTodos={addTodo} items={items} />
       </div>
 
       <div>
         <ul>
-          {items.map((todoItem,index) => (
+          {items.map((todoItem, index) => (
             <TodoItem
               key={todoItem.id}
               description={todoItem.description}
-              handleDelete={() =>handleDelete(index)}
+              handleDelete={() => handleDelete(index)}
             />
           ))}
         </ul>

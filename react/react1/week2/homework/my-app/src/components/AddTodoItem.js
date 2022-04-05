@@ -1,7 +1,7 @@
 import React from "react";
 
-export const AddTodoItem = ({ addTodos, items }) => {
-  const newId = items.length;
+export const AddTodoItem = ({ addTodo, items }) => {
+  const newId = Math.floor(Math.random() * 10000);
   const newItems = ["Go to gym", "Taking a tur", "Hanging with friends"];
   const randomItem = Math.floor(Math.random() * newItems.length);
   const newTodo = {
@@ -10,7 +10,7 @@ export const AddTodoItem = ({ addTodos, items }) => {
   };
   return (
     <div className="addtodo">
-      <button onClick={() => addTodos(newTodo)}>Add todo</button>{" "}
+      <button onClick={() => addTodo(newTodo)}>Add todo</button>{" "}
       {!items.length && <span>No items</span>}
     </div>
   );
