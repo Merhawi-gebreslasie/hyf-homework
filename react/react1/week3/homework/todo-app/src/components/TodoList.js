@@ -9,12 +9,11 @@ export const TodoList = ({ fecthUrl }) => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    setLoading(true);
-    const timeOut = setTimeout(getData, 2000);
-    return () => clearTimeout(timeOut);
+    getData();
   }, []);
 
   const getData = async () => {
+    setLoading(true);
     try {
       const response = await fetch(fecthUrl);
       const result = await response.json();

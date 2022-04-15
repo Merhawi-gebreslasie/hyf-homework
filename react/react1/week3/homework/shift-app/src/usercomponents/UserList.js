@@ -11,9 +11,7 @@ const UserList = ({ fetchUrl }) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    setLoading(true);
-    const timeOut = setTimeout(getResult, 3000);
-    return () => clearTimeout(timeOut);
+  getResult()
   }, []);
   const getResult = async () => {
     setLoading(true);
@@ -34,9 +32,10 @@ const UserList = ({ fetchUrl }) => {
   };
 
   const handleFilter = (search) => {
-    setUsers((prevValues) =>
-      prevValues.filter((prev) =>
-        prev.name.toLowerCase().includes(search.toLowerCase())
+   const users= await getResult();
+    setUsers((prevalues) =>
+      prevalues.filter((user) =>
+        user.name.toLowerCase().includes(search.toLowerCase())
       )
     );
   };

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const AddTod = ({ addTodo, items }) => {
-  const newId = Math.floor(Math.random() * 10000);
+  const newId = items[items.length-1].id+1;
   const initialValue = {
     id: newId,
     description: "",
